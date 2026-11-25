@@ -18,6 +18,7 @@ OUT = Path("/output/entry.txt")
 def check_len(text, lo=1, hi=200):
     size = len(text)
     assert lo <= size <= hi, f"entry must be {lo}-{hi} chars, got {size}"
+    assert "\n" not in text, "entry must be a single line"
     return size
 
 
